@@ -1,4 +1,4 @@
-# Email Verification API
+# API de Verificação de Email
 
 API simples para **verificação de e-mail com código temporário**, desenvolvida com **FastAPI**.  
 A aplicação envia um código de verificação por e-mail e utiliza **JWT** para validar o código sem necessidade de banco de dados.
