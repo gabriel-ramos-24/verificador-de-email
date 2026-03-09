@@ -20,7 +20,7 @@ A aplicação envia um código de verificação por e-mail e utiliza **JWT** par
      - email
      - código
      - data de criação
-     - data de expiração (1 minuto)
+     - data de expiração (5 minutos)
 3. O código é enviado para o e-mail do usuário
 4. O usuário envia o código e o token para `/verificar-email/`
 5. A API valida o código dentro do token
