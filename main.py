@@ -48,7 +48,7 @@ def enviar(dados: EmailRequest):
         "email": str(dados.email),
         "code": randint(1000, 9999),
         "iat": datetime.now(timezone.utc),
-        "exp": datetime.now(timezone.utc) + timedelta(minutes=1)
+        "exp": datetime.now(timezone.utc) + timedelta(minutes=5)
     }
 
     token = jwt.encode(payload, JWT_SECRET, algorithm="HS256")
@@ -70,5 +70,6 @@ def verificar(obj: Verificador):
 
     if dados["code"] != obj.code:
         raise HTTPException(status_code=401, detail="Código incorreto.")
+
 
     return {"mensagem": "Login realizado com sucesso!"}
